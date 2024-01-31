@@ -97,7 +97,7 @@ const WalletAddress = styled.div`
   gap: 10px;
   border: 1px solid #4e4962;
   border-radius: 100px;
-  padding: 12px 20px;
+  padding: 11px 20px;
   cursor: pointer;
 `;
 
