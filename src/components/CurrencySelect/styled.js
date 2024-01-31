@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import { ReactComponent as Arrow } from 'assets/icons/arrow.svg';
 
 const SelectContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-
   position: relative;
 `;
 
@@ -51,9 +47,8 @@ const OptionsContainer = styled.div`
   flex-direction: column;
   border-radius: 24px;
   border: 1px solid #302b44;
-  padding: 4px 0px;
   width: 100%;
-  height: 130px;
+  max-height: 130px;
   background: #0e0c11;
   box-shadow: 0px 4px 20px 0px #0e0c11;
   overflow-y: scroll;

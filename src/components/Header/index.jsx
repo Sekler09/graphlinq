@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { ReactComponent as GLQIcon } from 'assets/icons/glq-icon.svg';
 import { ReactComponent as ETHIcon } from 'assets/icons/eth-icon.svg';
@@ -6,6 +6,7 @@ import { ReactComponent as DashboardIcon } from 'assets/icons/dashboard.svg';
 import { ReactComponent as CoinIcon } from 'assets/icons/coin.svg';
 import { ReactComponent as ChainIcon } from 'assets/icons/chain.svg';
 import { ReactComponent as BridgeIcon } from 'assets/icons/bridge.svg';
+import { ReactComponent as WalletIcon } from 'assets/icons/wallet.svg';
 import Logo from 'components/Logo';
 import CurrencyRate from 'components/CurrencyRate';
 import {
@@ -13,13 +14,23 @@ import {
   ConnectButton,
   FlexContainer,
   Nav,
+  PlusIcon,
   Span,
   StyledHeader,
-  WalletIcon,
+  WalletContainer,
+  ConnectWalletIcon,
+  WalletValue,
+  WalletAddress,
+  Address,
+  MoreIcon,
 } from './styled';
 import NavigationLink from '../NavigationLink';
 
 export default function Header() {
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
+
+  const connectWallet = () => setIsWalletConnected(true);
+
   return (
     <StyledHeader>
       <Span>
@@ -42,10 +53,25 @@ export default function Header() {
         <NavigationLink icon={<BridgeIcon />} to="/" title="Bridge" />
       </Nav>
       <Span>
-        <ConnectButton>
-          <WalletIcon />
-          <ButtonTitle>Connect Wallet</ButtonTitle>
-        </ConnectButton>
+        {!isWalletConnected ? (
+          <ConnectButton onClick={connectWallet}>
+            <ConnectWalletIcon />
+            <ButtonTitle>Connect Wallet</ButtonTitle>
+          </ConnectButton>
+        ) : (
+          <FlexContainer $gap={16}>
+            <WalletContainer>
+              <GLQIcon />
+              <WalletValue>334.02</WalletValue>
+              <PlusIcon />
+            </WalletContainer>
+            <WalletAddress>
+              <WalletIcon />
+              <Address>0x0549a...88Efc</Address>
+            </WalletAddress>
+            <MoreIcon />
+          </FlexContainer>
+        )}
       </Span>
     </StyledHeader>
   );

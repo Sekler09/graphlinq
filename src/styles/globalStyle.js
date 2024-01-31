@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
-import Gilroy from 'assets/fonts/Gilroy-SemiBold.ttf';
+import Gilroy from 'assets/fonts/Gilroy-Semibold.woff2';
 import BackgroundImage from 'assets/images/bg.png';
 
 export default createGlobalStyle`
   @font-face {
-  font-family: Gilroy-SemiBold;
-  src: url(${Gilroy});
+    font-family: Gilroy-SemiBold;
+    src: url(${Gilroy});
   }
 
 

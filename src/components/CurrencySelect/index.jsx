@@ -20,7 +20,11 @@ export default function CurrencySelect() {
 
   return (
     <SelectContainer>
-      <Select onClick={() => setIsOpen(prev => !prev)}>
+      <Select
+        onClick={() => {
+          setIsOpen(prev => !prev);
+        }}
+      >
         <GLQIcon />
         <Currency>GLQ</Currency>
         <CurrencyFullName>Graphlink Chain</CurrencyFullName>
