@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as ConnectWallet } from 'assets/icons/connect-wallet.svg';
 import { ReactComponent as Plus } from 'assets/icons/plus.svg';
 import { ReactComponent as More } from 'assets/icons/more.svg';
+import { ReactComponent as Wallet } from 'assets/icons/wallet.svg';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -11,13 +12,17 @@ const StyledHeader = styled.header`
   align-items: center;
   padding: 16px 24px;
   height: 80px;
-  font-size: large;
   color: white;
 
   span:first-of-type:after,
   span:last-of-type:before {
     content: '';
     display: inline-block;
+  }
+
+  @media (min-width: 3000px) {
+    padding: 32px 48px;
+    height: 160px;
   }
 `;
 
@@ -37,13 +42,30 @@ const Nav = styled.nav`
   display: flex;
 `;
 
+const WalletInfoContainer = styled.div`
+  display: flex;
+  gap: 16px;
+
+  @media (min-width: 3000px) {
+    gap: 32px;
+  }
+`;
+
 const ButtonTitle = styled.div`
   color: #ffffff;
   font-size: 16px;
+
+  @media (min-width: 3000px) {
+    font-size: 36px;
+  }
 `;
 
 const ConnectWalletIcon = styled(ConnectWallet)`
   fill: #ffffff;
+
+  @media (min-width: 3000px) {
+    width: 48px;
+  }
 `;
 
 const ConnectButton = styled.button`
@@ -54,10 +76,19 @@ const ConnectButton = styled.button`
   padding: 12px 24px;
   background: linear-gradient(270deg, #9a23e6 -0.49%, #5519ee 99.51%);
   cursor: pointer;
+
+  @media (min-width: 3000px) {
+    gap: 20px;
+    padding: 24px 48px;
+  }
 `;
 
 const PlusIcon = styled(Plus)`
   fill: black;
+
+  @media (min-width: 3000px) {
+    width: 64px;
+  }
 `;
 
 const WalletContainer = styled.div`
@@ -66,8 +97,7 @@ const WalletContainer = styled.div`
   gap: 10px;
   border-radius: 100px;
   border: 1px solid #302b44;
-  padding: 12px 8px 12px 20px;
-  height: 48px;
+  padding: 8px 8px 8px 20px;
   cursor: pointer;
 
   &:hover {
@@ -84,11 +114,32 @@ const WalletContainer = styled.div`
       fill: #0e0c11;
     }
   }
+
+  @media (min-width: 3000px) {
+    gap: 20px;
+    padding: 16px 16px 16px 40px;
+  }
+`;
+
+const WalletCurrencyContainer = styled.div`
+  svg {
+    width: 20px;
+  }
+
+  @media (min-width: 3000px) {
+    svg {
+      width: 40px;
+    }
+  }
 `;
 
 const WalletValue = styled.div`
   color: #ffffff;
   font-size: 16px;
+
+  @media (min-width: 3000px) {
+    font-size: 32px;
+  }
 `;
 
 const WalletAddress = styled.div`
@@ -99,11 +150,28 @@ const WalletAddress = styled.div`
   border-radius: 100px;
   padding: 11px 20px;
   cursor: pointer;
+
+  @media (min-width: 3000px) {
+    gap: 20px;
+    padding: 22px 40px;
+  }
+`;
+
+const WalletIcon = styled(Wallet)`
+  width: 24px;
+
+  @media (min-width: 3000px) {
+    width: 48px;
+  }
 `;
 
 const Address = styled.div`
   color: #ffffff;
   font-size: 16px;
+
+  @media (min-width: 3000px) {
+    font-size: 32px;
+  }
 `;
 
 const MoreIcon = styled(More)`
@@ -111,6 +179,10 @@ const MoreIcon = styled(More)`
   cursor: pointer;
   &:hover {
     fill: #ffffff;
+  }
+
+  @media (min-width: 3000px) {
+    width: 48px;
   }
 `;
 
@@ -128,4 +200,7 @@ export {
   WalletAddress,
   Address,
   MoreIcon,
+  WalletCurrencyContainer,
+  WalletIcon,
+  WalletInfoContainer,
 };

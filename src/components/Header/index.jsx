@@ -6,7 +6,6 @@ import { ReactComponent as DashboardIcon } from 'assets/icons/dashboard.svg';
 import { ReactComponent as CoinIcon } from 'assets/icons/coin.svg';
 import { ReactComponent as ChainIcon } from 'assets/icons/chain.svg';
 import { ReactComponent as BridgeIcon } from 'assets/icons/bridge.svg';
-import { ReactComponent as WalletIcon } from 'assets/icons/wallet.svg';
 import Logo from 'components/Logo';
 import CurrencyRate from 'components/CurrencyRate';
 import {
@@ -23,6 +22,9 @@ import {
   WalletAddress,
   Address,
   MoreIcon,
+  WalletCurrencyContainer,
+  WalletIcon,
+  WalletInfoContainer,
 } from './styled';
 import NavigationLink from '../NavigationLink';
 
@@ -59,9 +61,11 @@ export default function Header() {
             <ButtonTitle>Connect Wallet</ButtonTitle>
           </ConnectButton>
         ) : (
-          <FlexContainer $gap={16}>
+          <WalletInfoContainer>
             <WalletContainer>
-              <GLQIcon />
+              <WalletCurrencyContainer>
+                <GLQIcon />
+              </WalletCurrencyContainer>
               <WalletValue>334.02</WalletValue>
               <PlusIcon />
             </WalletContainer>
@@ -70,7 +74,7 @@ export default function Header() {
               <Address>0x0549a...88Efc</Address>
             </WalletAddress>
             <MoreIcon />
-          </FlexContainer>
+          </WalletInfoContainer>
         )}
       </Span>
     </StyledHeader>

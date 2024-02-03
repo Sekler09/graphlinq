@@ -11,10 +11,16 @@ const LogoContainer = styled.div`
 
 const LogoIcon = styled(logo)`
   max-width: none;
+
+  @media (min-width: 3000px) {
+    width: 75px;
+  }
 `;
 
 const LogoName = styled(name)`
-  max-width: none;
+  @media (min-width: 3000px) {
+    width: 250px;
+  }
 `;
 
 export { LogoIcon, LogoName, LogoContainer };

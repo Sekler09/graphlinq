@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 const Title = styled.div`
   font-size: 16px;
+
+  @media (min-width: 3000px) {
+    font-size: 36px;
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -32,6 +36,15 @@ const StyledNavLink = styled(NavLink)`
       fill: #ffffff;
     }
     color: #ffffff;
+  }
+
+  @media (min-width: 3000px) {
+    gap: 24px;
+    padding: 24px 40px;
+
+    svg {
+      width: 50px;
+    }
   }
 `;
 

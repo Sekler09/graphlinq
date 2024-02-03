@@ -18,18 +18,39 @@ const Select = styled.div`
 
   svg {
     fill: #ffffff;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (min-width: 3000px) {
+    gap: 16px;
+    padding: 26px 40px;
+    width: 536px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
   }
 `;
 
 const Currency = styled.div`
   font-size: 16px;
   color: #ffffff;
+
+  @media (min-width: 3000px) {
+    font-size: 32px;
+  }
 `;
 
 const CurrencyFullName = styled.div`
   flex: 1 0 0;
   font-size: 16px;
   color: #897fac;
+
+  @media (min-width: 3000px) {
+    font-size: 32px;
+  }
 `;
 
 const ArrowIcon = styled(Arrow)`
@@ -56,6 +77,11 @@ const OptionsContainer = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media (min-width: 3000px) {
+    top: calc(100% + 8px);
+    max-height: 230px;
+  }
 `;
 
 const Option = styled.div`
@@ -68,6 +94,21 @@ const Option = styled.div`
 
   &:hover {
     background: #1b1621;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (min-width: 3000px) {
+    gap: 16px;
+    padding: 16px 40px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
   }
 `;
 

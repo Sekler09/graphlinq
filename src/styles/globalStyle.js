@@ -13,6 +13,8 @@ export default createGlobalStyle`
   body {
     place-items: baseline;
     background: url(${BackgroundImage});
+    background-size: cover;
+    height: 100%;
     background-blend-mode: saturation, normal;
   }
 
