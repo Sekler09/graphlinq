@@ -38,10 +38,6 @@ const FlexContainer = styled.div`
   gap: ${({ $gap }) => `${$gap}px`};
 `;
 
-const Nav = styled.nav`
-  display: flex;
-`;
-
 const WalletInfoContainer = styled.div`
   display: flex;
   gap: 16px;
@@ -189,7 +185,6 @@ const MoreIcon = styled(More)`
 export {
   StyledHeader,
   FlexContainer,
-  Nav,
   ConnectButton,
   ButtonTitle,
   ConnectWalletIcon,
