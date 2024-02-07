@@ -4,6 +4,10 @@ import styled from 'styled-components';
 const Title = styled.div`
   font-size: 16px;
 
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+
   @media (min-width: 3000px) {
     font-size: 36px;
   }
@@ -18,6 +22,7 @@ const StyledNavLink = styled(NavLink)`
 
   svg {
     fill: #897fac;
+    width: 24px;
   }
 
   &:hover {
@@ -36,6 +41,15 @@ const StyledNavLink = styled(NavLink)`
       fill: #ffffff;
     }
     color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
+
+    &.active {
+      background: none;
+    }
   }
 
   @media (min-width: 3000px) {

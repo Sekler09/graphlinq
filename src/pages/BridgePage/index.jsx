@@ -23,6 +23,7 @@ import {
   InfoIcon,
   InfoText,
   InfoTotal,
+  InputWithButtonsContainer,
   InputsContainer,
   PickAmountButton,
   PickAmountButtonsContainer,
@@ -53,11 +54,18 @@ export default function BridgePage() {
           <AvailableCurrency>GLQ</AvailableCurrency>
         </AvailableAmount>
         <InputsContainer>
-          <CurrencyInput>
-            <GLQIcon />
-            <CurrencyInputValue>130</CurrencyInputValue>
-            <CurrencyInputName>GLQ</CurrencyInputName>
-          </CurrencyInput>
+          <InputWithButtonsContainer>
+            <CurrencyInput>
+              <GLQIcon />
+              <CurrencyInputValue>130</CurrencyInputValue>
+              <CurrencyInputName>GLQ</CurrencyInputName>
+            </CurrencyInput>
+            <PickAmountButtonsContainer>
+              <PickAmountButton>25%</PickAmountButton>
+              <PickAmountButton>50%</PickAmountButton>
+              <PickAmountButton>MAX</PickAmountButton>
+            </PickAmountButtonsContainer>
+          </InputWithButtonsContainer>
           <Equality>=</Equality>
           <CurrencyInput>
             <ETHIcon />
@@ -65,11 +73,6 @@ export default function BridgePage() {
             <CurrencyInputName>ETH</CurrencyInputName>
           </CurrencyInput>
         </InputsContainer>
-        <PickAmountButtonsContainer>
-          <PickAmountButton>25%</PickAmountButton>
-          <PickAmountButton>50%</PickAmountButton>
-          <PickAmountButton>MAX</PickAmountButton>
-        </PickAmountButtonsContainer>
         <ClaimButton>Claim</ClaimButton>
         <InfoContainer>
           <InfoIcon />
@@ -78,8 +81,8 @@ export default function BridgePage() {
         </InfoContainer>
       </BridgeContainer>
       <DisclaimerText>
-        Your claim amount available could be taking delays (max ~72h) <br />
-        Please wait & ome back later if you don&apos;t see them!
+        Your claim amount available could be taking delays (max ~72h) Please
+        wait & ome back later if you don&apos;t see them!
       </DisclaimerText>
     </BridgePageContainer>
   );

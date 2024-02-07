@@ -20,6 +20,10 @@ const StyledHeader = styled.header`
     display: inline-block;
   }
 
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+
   @media (min-width: 3000px) {
     padding: 32px 48px;
     height: 160px;
@@ -42,6 +46,10 @@ const WalletInfoContainer = styled.div`
   display: flex;
   gap: 16px;
 
+  @media (max-width: 768px) {
+    gap: 4px;
+  }
+
   @media (min-width: 3000px) {
     gap: 32px;
   }
@@ -51,6 +59,10 @@ const ButtonTitle = styled.div`
   color: #ffffff;
   font-size: 16px;
 
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
   @media (min-width: 3000px) {
     font-size: 36px;
   }
@@ -58,6 +70,10 @@ const ButtonTitle = styled.div`
 
 const ConnectWalletIcon = styled(ConnectWallet)`
   fill: #ffffff;
+
+  @media (max-width: 768px) {
+    width: 20px;
+  }
 
   @media (min-width: 3000px) {
     width: 48px;
@@ -72,6 +88,10 @@ const ConnectButton = styled.button`
   padding: 12px 24px;
   background: linear-gradient(270deg, #9a23e6 -0.49%, #5519ee 99.51%);
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 10px 12px;
+  }
 
   @media (min-width: 3000px) {
     gap: 20px;
@@ -111,6 +131,10 @@ const WalletContainer = styled.div`
     }
   }
 
+  @media (max-width: 768px) {
+    padding: 6px 6px 6px 12px;
+  }
+
   @media (min-width: 3000px) {
     gap: 20px;
     padding: 16px 16px 16px 40px;
@@ -118,6 +142,8 @@ const WalletContainer = styled.div`
 `;
 
 const WalletCurrencyContainer = styled.div`
+  height: 20px;
+
   svg {
     width: 20px;
   }
@@ -133,6 +159,10 @@ const WalletValue = styled.div`
   color: #ffffff;
   font-size: 16px;
 
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
   @media (min-width: 3000px) {
     font-size: 32px;
   }
@@ -147,6 +177,10 @@ const WalletAddress = styled.div`
   padding: 11px 20px;
   cursor: pointer;
 
+  @media (max-width: 768px) {
+    padding: 10px 12px;
+  }
+
   @media (min-width: 3000px) {
     gap: 20px;
     padding: 22px 40px;
@@ -156,6 +190,10 @@ const WalletAddress = styled.div`
 const WalletIcon = styled(Wallet)`
   width: 24px;
 
+  @media (max-width: 768px) {
+    width: 20px;
+  }
+
   @media (min-width: 3000px) {
     width: 48px;
   }
@@ -164,6 +202,10 @@ const WalletIcon = styled(Wallet)`
 const Address = styled.div`
   color: #ffffff;
   font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 
   @media (min-width: 3000px) {
     font-size: 32px;
@@ -177,8 +219,27 @@ const MoreIcon = styled(More)`
     fill: #ffffff;
   }
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   @media (min-width: 3000px) {
     width: 48px;
+  }
+`;
+
+const NavContainer = styled.div`
+  @media (max-width: 1475px) {
+    display: none;
+  }
+`;
+
+const RatesContainer = styled.div`
+  display: flex;
+  gap: 16px;
+
+  @media (max-width: 1475px) {
+    display: none;
   }
 `;
 
@@ -198,4 +259,6 @@ export {
   WalletCurrencyContainer,
   WalletIcon,
   WalletInfoContainer,
+  NavContainer,
+  RatesContainer,
 };

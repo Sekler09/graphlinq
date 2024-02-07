@@ -22,6 +22,16 @@ const Select = styled.div`
     height: 20px;
   }
 
+  @media (max-width: 1475px) {
+    padding: 16.5px 20px;
+    width: 308px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 18px 20px;
+    width: 343px;
+  }
+
   @media (min-width: 3000px) {
     gap: 16px;
     padding: 26px 40px;

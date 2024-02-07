@@ -21,6 +21,8 @@ import {
   WalletCurrencyContainer,
   WalletIcon,
   WalletInfoContainer,
+  NavContainer,
+  RatesContainer,
 } from './styled';
 
 export default function Header() {
@@ -33,13 +35,15 @@ export default function Header() {
       <Span>
         <FlexContainer $gap={40}>
           <Logo />
-          <FlexContainer $gap={16}>
+          <RatesContainer>
             <CurrencyRate icon={<GLQIcon />} rate={0.02743} />
             <CurrencyRate icon={<ETHIcon />} rate={2239.02} />
-          </FlexContainer>
+          </RatesContainer>
         </FlexContainer>
       </Span>
-      <Nav />
+      <NavContainer>
+        <Nav />
+      </NavContainer>
       <Span>
         {!isWalletConnected ? (
           <ConnectButton onClick={connectWallet}>
