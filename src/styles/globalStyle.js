@@ -16,6 +16,7 @@ export default createGlobalStyle`
     background-size: cover;
     height: 100%;
     background-blend-mode: saturation, normal;
+    min-height: 100vh;
   }
 
   * {
