@@ -44,4 +44,13 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/prefer-default-export': 'off',
   },
+
+  overrides: [
+    {
+      files: ['src/store/**/*.js'],
+      rules: {
+        'no-param-reassign': 'off',
+      },
+    },
+  ],
 };

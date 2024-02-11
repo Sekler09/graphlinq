@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { ReactComponent as GLQIcon } from 'assets/icons/glq-icon.svg';
 import { ReactComponent as ETHIcon } from 'assets/icons/eth-icon.svg';
 import Logo from 'components/Logo';
 import Nav from 'components/Nav';
 import CurrencyRate from 'components/CurrencyRate';
+import { connectWallet } from 'store/slices/walletSlice';
 import {
   ButtonTitle,
   ConnectButton,
@@ -26,9 +28,8 @@ import {
 } from './styled';
 
 export default function Header() {
-  const [isWalletConnected, setIsWalletConnected] = useState(false);
-
-  const connectWallet = () => setIsWalletConnected(true);
+  const isWalletConnected = useSelector(state => state.wallet.isConnected);
+  const dispatch = useDispatch();
 
   return (
     <StyledHeader>
@@ -46,7 +47,7 @@ export default function Header() {
       </NavContainer>
       <Span>
         {!isWalletConnected ? (
-          <ConnectButton onClick={connectWallet}>
+          <ConnectButton onClick={() => dispatch(connectWallet())}>
             <ConnectWalletIcon />
             <ButtonTitle>Connect Wallet</ButtonTitle>
           </ConnectButton>

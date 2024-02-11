@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import Layout from 'components/Layout';
+import TokensLayout from 'components/TokensLayout';
 import BridgePage from 'pages/BridgePage';
-import TokensLayout from '../components/TokensLayout';
+import TokensSwapPage from 'pages/TokensSwapPage';
 
 export default createBrowserRouter([
   {
@@ -17,12 +18,12 @@ export default createBrowserRouter([
         element: <TokensLayout />,
         children: [
           {
-            path: '/tokens/send',
-            element: 'Hello send',
+            path: '/tokens/swap',
+            element: <TokensSwapPage />,
           },
           {
-            path: '/tokens/swap',
-            element: 'Hello swap',
+            path: '/tokens/send',
+            element: 'Hello send',
           },
         ],
       },
