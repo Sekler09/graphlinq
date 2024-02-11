@@ -5,7 +5,7 @@ const RateValue = styled.p`
   font-size: 16px;
   line-height: 16px;
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     font-size: 36px;
     line-height: 36px;
   }
@@ -22,14 +22,14 @@ const Container = styled.div`
   }
 
   &:hover ${RateValue} {
-    color: #ffffff;
+    color: #fff;
   }
 
   &:hover svg {
-    fill: #ffffff;
+    fill: #fff;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     gap: 16px;
 
     svg {

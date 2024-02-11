@@ -12,21 +12,21 @@ const LogoContainer = styled.div`
 const LogoIcon = styled(logo)`
   max-width: none;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 21px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     width: 75px;
   }
 `;
 
 const LogoName = styled(name)`
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: none;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     width: 250px;
   }
 `;

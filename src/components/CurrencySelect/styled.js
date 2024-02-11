@@ -17,22 +17,22 @@ const Select = styled.div`
   width: 268px;
 
   svg {
-    fill: #ffffff;
+    fill: #fff;
     width: 20px;
     height: 20px;
   }
 
-  @media (max-width: 1475px) {
+  @media (width <= 1475px) {
     padding: 16.5px 20px;
     width: 308px;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     padding: 18px 20px;
     width: 343px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     gap: 16px;
     padding: 26px 40px;
     width: 536px;
@@ -46,9 +46,9 @@ const Select = styled.div`
 
 const Currency = styled.div`
   font-size: 16px;
-  color: #ffffff;
+  color: #fff;
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     font-size: 32px;
   }
 `;
@@ -58,7 +58,7 @@ const CurrencyFullName = styled.div`
   font-size: 16px;
   color: #897fac;
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     font-size: 32px;
   }
 `;
@@ -81,14 +81,14 @@ const OptionsContainer = styled.div`
   width: 100%;
   max-height: 130px;
   background: #0e0c11;
-  box-shadow: 0px 4px 20px 0px #0e0c11;
+  box-shadow: 0 4px 20px 0 #0e0c11;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     top: calc(100% + 8px);
     max-height: 230px;
   }
@@ -111,7 +111,7 @@ const Option = styled.div`
     height: 20px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     gap: 16px;
     padding: 16px 40px;
 

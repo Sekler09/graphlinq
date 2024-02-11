@@ -4,11 +4,11 @@ import styled from 'styled-components';
 const Title = styled.div`
   font-size: 16px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 10px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     font-size: 36px;
   }
 `;
@@ -26,11 +26,11 @@ const StyledNavLink = styled(NavLink)`
   }
 
   &:hover {
-    color: #ffffff;
+    color: #fff;
   }
 
   &:hover svg {
-    fill: #ffffff;
+    fill: #fff;
   }
 
   &.active {
@@ -38,12 +38,13 @@ const StyledNavLink = styled(NavLink)`
     background: #302b44;
 
     svg {
-      fill: #ffffff;
+      fill: #fff;
     }
-    color: #ffffff;
+
+    color: #fff;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     flex-direction: column;
     padding: 0;
 
@@ -52,7 +53,7 @@ const StyledNavLink = styled(NavLink)`
     }
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     gap: 24px;
     padding: 24px 40px;
 

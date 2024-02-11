@@ -14,17 +14,17 @@ const StyledHeader = styled.header`
   height: 80px;
   color: white;
 
-  span:first-of-type:after,
-  span:last-of-type:before {
+  span:first-of-type::after,
+  span:last-of-type::before {
     content: '';
     display: inline-block;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     padding: 16px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     padding: 32px 48px;
     height: 160px;
   }
@@ -46,36 +46,36 @@ const WalletInfoContainer = styled.div`
   display: flex;
   gap: 16px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     gap: 4px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     gap: 32px;
   }
 `;
 
 const ButtonTitle = styled.div`
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 14px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     font-size: 36px;
   }
 `;
 
 const ConnectWalletIcon = styled(ConnectWallet)`
-  fill: #ffffff;
+  fill: #fff;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 20px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     width: 48px;
   }
 `;
@@ -89,11 +89,11 @@ const ConnectButton = styled.button`
   background: linear-gradient(270deg, #9a23e6 -0.49%, #5519ee 99.51%);
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     padding: 10px 12px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     gap: 20px;
     padding: 24px 48px;
   }
@@ -102,7 +102,7 @@ const ConnectButton = styled.button`
 const PlusIcon = styled(Plus)`
   fill: black;
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     width: 64px;
   }
 `;
@@ -131,11 +131,11 @@ const WalletContainer = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     padding: 6px 6px 6px 12px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     gap: 20px;
     padding: 16px 16px 16px 40px;
   }
@@ -148,7 +148,7 @@ const WalletCurrencyContainer = styled.div`
     width: 20px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     svg {
       width: 40px;
     }
@@ -156,14 +156,14 @@ const WalletCurrencyContainer = styled.div`
 `;
 
 const WalletValue = styled.div`
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 14px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     font-size: 32px;
   }
 `;
@@ -177,11 +177,11 @@ const WalletAddress = styled.div`
   padding: 11px 20px;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     padding: 10px 12px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     gap: 20px;
     padding: 22px 40px;
   }
@@ -190,24 +190,24 @@ const WalletAddress = styled.div`
 const WalletIcon = styled(Wallet)`
   width: 24px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 20px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     width: 48px;
   }
 `;
 
 const Address = styled.div`
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 14px;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     font-size: 32px;
   }
 `;
@@ -215,21 +215,22 @@ const Address = styled.div`
 const MoreIcon = styled(More)`
   fill: #897fac;
   cursor: pointer;
+
   &:hover {
-    fill: #ffffff;
+    fill: #fff;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: none;
   }
 
-  @media (min-width: 3000px) {
+  @media (width >= 3000px) {
     width: 48px;
   }
 `;
 
 const NavContainer = styled.div`
-  @media (max-width: 1475px) {
+  @media (width <= 1475px) {
     display: none;
   }
 `;
@@ -238,7 +239,7 @@ const RatesContainer = styled.div`
   display: flex;
   gap: 16px;
 
-  @media (max-width: 1475px) {
+  @media (width <= 1475px) {
     display: none;
   }
 `;

@@ -7,7 +7,7 @@ const NavContainer = styled.nav`
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 360px;
     justify-content: space-between;
 
