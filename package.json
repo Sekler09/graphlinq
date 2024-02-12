@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && echo '/* /index.html  200' | cat >dist/_redirects",
     "lint": "npm run lint-eslint && npm run lint-css",
     "lint-eslint": "eslint --ext .js,.jsx src/ *.js",
     "lint-css": "stylelint \"src/**/*.{js,jsx}\"",
