@@ -30,7 +30,7 @@ import {
   Token,
 } from './styled';
 
-export default function TokensSwapPage() {
+export default function SwapTokensPage() {
   const isWalletConnected = useSelector(state => state.wallet.isConnected);
   const dispatch = useDispatch();
 
