@@ -83,19 +83,22 @@ const ConnectWalletIcon = styled(ConnectWallet)`
 const ConnectButton = styled.button`
   display: flex;
   align-items: center;
+  height: 48px;
   gap: 10px;
   border-radius: 100px;
-  padding: 12px 24px;
+  padding: 0 24px;
   background: linear-gradient(270deg, #9a23e6 -0.49%, #5519ee 99.51%);
   cursor: pointer;
 
   @media (width <= 768px) {
-    padding: 10px 12px;
+    padding: 0 12px;
+    height: 40px;
   }
 
   @media (width >= 3000px) {
     gap: 20px;
-    padding: 24px 48px;
+    padding: 0 48px;
+    height: 96px;
   }
 `;
 
@@ -112,8 +115,9 @@ const WalletContainer = styled.div`
   align-items: center;
   gap: 10px;
   border-radius: 100px;
+  height: 48px;
   border: 1px solid #302b44;
-  padding: 8px 8px 8px 20px;
+  padding: 0 20px;
   cursor: pointer;
 
   &:hover {
@@ -132,12 +136,14 @@ const WalletContainer = styled.div`
   }
 
   @media (width <= 768px) {
-    padding: 6px 6px 6px 12px;
+    padding: 0 12px;
+    height: 40px;
   }
 
   @media (width >= 3000px) {
     gap: 20px;
-    padding: 16px 16px 16px 40px;
+    padding: 0 40px;
+    height: 96px;
   }
 `;
 
@@ -176,16 +182,19 @@ const WalletAddress = styled.div`
   gap: 10px;
   border: 1px solid #4e4962;
   border-radius: 100px;
-  padding: 11px 20px;
+  height: 48px;
+  padding: 0 20px;
   cursor: pointer;
 
   @media (width <= 768px) {
-    padding: 10px 12px;
+    padding: 0 12px;
+    height: 40px;
   }
 
   @media (width >= 3000px) {
     gap: 20px;
-    padding: 22px 40px;
+    padding: 0 40px;
+    height: 96px;
   }
 `;
 
