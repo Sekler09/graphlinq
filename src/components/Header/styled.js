@@ -149,6 +149,8 @@ const WalletCurrencyContainer = styled.div`
   }
 
   @media (width >= 3000px) {
+    height: 40px;
+
     svg {
       width: 40px;
     }

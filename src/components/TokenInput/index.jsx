@@ -17,7 +17,7 @@ export default function TokenInput({ label, tokensAmount, selected }) {
       <InputContainer>
         <AmountContainer>
           <TokensAmount>{tokensAmount}</TokensAmount>
-          {tokensAmount && (
+          {!!tokensAmount && (
             <DollarsAmount>$ {dollars.toLocaleString('en')}</DollarsAmount>
           )}
         </AmountContainer>

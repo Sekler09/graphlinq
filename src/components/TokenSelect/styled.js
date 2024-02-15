@@ -16,6 +16,15 @@ const Select = styled.div`
   border-color: ${({ $isOpen }) => ($isOpen ? '#9a23e6' : '#302b44')};
   background: ${({ $isOpen }) => ($isOpen ? 'transparent' : '#302b44')};
   cursor: pointer;
+
+  @media (width >= 3000px) {
+    padding: 6px 8px 6px 20px;
+    gap: 20px;
+  }
+
+  @media (width <= 1475px) {
+    padding: 8px 4px 8px 10px;
+  }
 `;
 
 const NotSelect = styled.div`
@@ -30,6 +39,14 @@ const NotSelect = styled.div`
   svg {
     opacity: 1;
   }
+
+  @media (width >= 3000px) {
+    padding: 8px 8px 8px 20px;
+  }
+
+  @media (width <= 1475px) {
+    padding: 8px 4px 8px 10px;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -40,17 +57,36 @@ const IconContainer = styled.div`
     width: 20px;
     height: 20px;
   }
+
+  @media (width >= 3000px) {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 `;
 
 const Currency = styled.div`
   font-size: 16px;
   color: #fff;
+
+  @media (width >= 3000px) {
+    font-size: 32px;
+  }
+
+  @media (width <= 768px) {
+    font-size: 14px;
+  }
 `;
 
 const CurrencyFullName = styled.div`
   flex: 1 0 0;
   font-size: 16px;
   color: #897fac;
+
+  @media (width >= 3000px) {
+    font-size: 32px;
+  }
 `;
 
 const ArrowIcon = styled(Arrow)`
@@ -59,6 +95,11 @@ const ArrowIcon = styled(Arrow)`
   transform: ${({ $isOpen }) => ($isOpen ? 'rotate(0deg)' : 'rotate(180deg)')};
   opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0.5)};
   transition: all 0.3s ease;
+
+  @media (width >= 3000px) {
+    width: 48px;
+    height: 48px;
+  }
 `;
 
 const OptionsContainer = styled.div`
@@ -83,6 +124,7 @@ const OptionsContainer = styled.div`
   @media (width >= 3000px) {
     top: calc(100% + 8px);
     max-height: 230px;
+    width: 536px;
   }
 `;
 

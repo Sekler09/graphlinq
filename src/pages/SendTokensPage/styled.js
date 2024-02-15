@@ -5,6 +5,14 @@ const InputsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 32px;
+
+  @media (width >= 3000px) {
+    gap: 64px;
+  }
+
+  @media (width <= 768px) {
+    gap: 16px;
+  }
 `;
 
 const ConnectButton = styled.button`
@@ -23,6 +31,24 @@ const ConnectButton = styled.button`
     width: 20px;
     fill: #fff;
   }
+
+  @media (width >= 3000px) {
+    height: 96px;
+    gap: 20px;
+
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  @media (width <= 1475px) {
+    padding: 19px 0 17px;
+  }
+
+  @media (width <= 768px) {
+    padding: 15px 0 13px;
+  }
 `;
 
 const SendTokensButton = styled.button`
@@ -35,34 +61,79 @@ const SendTokensButton = styled.button`
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+
+  @media (width >= 3000px) {
+    height: 100px;
+    font-size: 32px;
+  }
+
+  @media (width <= 1475px) {
+    padding: 18px 0 16px;
+  }
 `;
 
 const ButtonTitle = styled.div`
   color: #fff;
   font-size: 16px;
+
+  @media (width >= 3000px) {
+    font-size: 32px;
+  }
 `;
 
 const AvailableContainer = styled.div`
   margin-bottom: 8px;
   color: #897fac;
+
+  @media (width >= 3000px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const AvailableTitle = styled.div`
   font-size: 16px;
+
+  @media (width >= 3000px) {
+    font-size: 32px;
+  }
+
+  @media (width <= 768px) {
+    font-size: 14px;
+  }
 `;
 
 const AvailableAmountContainer = styled.div`
   display: flex;
   gap: 12px;
+
+  @media (width >= 3000px) {
+    gap: 24px;
+  }
 `;
 
 const AvailableAmount = styled.div`
   font-size: 36px;
   color: #fff;
+
+  @media (width >= 3000px) {
+    font-size: 72px;
+  }
+
+  @media (width <= 768px) {
+    font-size: 24px;
+  }
 `;
 
 const AvailableAmountToken = styled.div`
   font-size: 36px;
+
+  @media (width >= 3000px) {
+    font-size: 72px;
+  }
+
+  @media (width <= 768px) {
+    font-size: 24px;
+  }
 `;
 
 export {
