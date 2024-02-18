@@ -28,8 +28,8 @@ export default function TokenInput({ label, selected }) {
       <Label>{label}</Label>
       <InputContainer>
         <Input
-          style={{ width: `${width * 0.8}ch` }}
-          type="text"
+          style={{ width: `${width * 0.9}ch` }}
+          type="number"
           onChange={handleAmountChange}
           value={amount}
           placeholder="0"

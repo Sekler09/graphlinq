@@ -40,9 +40,16 @@ const Input = styled.input`
   background: transparent;
   color: #fff;
   font-size: 16px;
+  appearance: textfield;
 
   &::placeholder {
     color: #897fac;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
   }
 
   @media (width >= 3000px) {
