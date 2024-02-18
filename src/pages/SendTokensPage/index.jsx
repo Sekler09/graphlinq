@@ -34,19 +34,8 @@ export default function SendTokensPage() {
         </AvailableContainer>
       )}
       <InputsContainer>
-        <TokenInput
-          label="You’re sending"
-          tokensAmount={isWalletConnected ? 2 : 0}
-          selected
-        />
-        <WalletAddressInput
-          label="To address"
-          value={
-            isWalletConnected
-              ? '0x8aBC86026492061C60B35E81Ccf23F408977895C'
-              : 'Wallet address or ENS name'
-          }
-        />
+        <TokenInput label="You’re sending" selected />
+        <WalletAddressInput label="To address" />
       </InputsContainer>
       {!isWalletConnected ? (
         <ConnectButton onClick={() => dispatch(connectWallet())}>

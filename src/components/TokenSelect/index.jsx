@@ -24,7 +24,9 @@ export default function TokenSelect({ selected }) {
     <SelectContainer>
       {selected ? (
         <Select
-          onClick={() => {
+          onClick={e => {
+            e.stopPropagation();
+
             setIsOpen(prev => !prev);
           }}
           $isOpen={isOpen}
@@ -39,7 +41,8 @@ export default function TokenSelect({ selected }) {
         </Select>
       ) : (
         <NotSelect
-          onClick={() => {
+          onClick={e => {
+            e.stopPropagation();
             setIsOpen(prev => !prev);
           }}
         >

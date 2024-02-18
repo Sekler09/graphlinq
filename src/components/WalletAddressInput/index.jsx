@@ -1,11 +1,29 @@
-import React from 'react';
-import { Container, InputContainer, Label } from './styled';
+import React, { useRef, useState } from 'react';
+import { Container, Input, InputContainer, Label } from './styled';
 
-export default function WalletAddressInput({ label, value }) {
+export default function WalletAddressInput({ label }) {
+  const [address, setAddress] = useState('');
+  const inputRef = useRef();
+  const handleAddressChange = e => {
+    setAddress(e.target.value);
+  };
+
   return (
-    <Container>
+    <Container
+      onClick={() => {
+        inputRef.current.focus();
+      }}
+    >
       <Label>{label}</Label>
-      <InputContainer>{value}</InputContainer>
+      <InputContainer>
+        <Input
+          type="text"
+          onChange={handleAddressChange}
+          value={address}
+          placeholder="Wallet address or ENS name"
+          ref={inputRef}
+        />
+      </InputContainer>
     </Container>
   );
 }

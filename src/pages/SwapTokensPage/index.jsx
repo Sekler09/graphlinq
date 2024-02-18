@@ -48,19 +48,11 @@ export default function SwapTokensPage() {
         </AvailableContainer>
       )}
       <InputsContainer>
-        <TokenInput
-          label="You pay"
-          tokensAmount={isWalletConnected ? 2 : 0}
-          selected
-        />
+        <TokenInput label="You pay" selected />
         <SwapButton>
           <SwapIcon />
         </SwapButton>
-        <TokenInput
-          label="You get"
-          tokensAmount={isWalletConnected ? 11826.8 : 0}
-          selected={isWalletConnected}
-        />
+        <TokenInput label="You get" selected={isWalletConnected} />
       </InputsContainer>
       {isWalletConnected && (
         <SwapInfoContainer onClick={() => setIsInfoOpened(prev => !prev)}>

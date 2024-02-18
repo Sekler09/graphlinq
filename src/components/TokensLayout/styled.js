@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const TokensLayoutContainer = styled.div`
+const TokensLayoutContainer = styled.form`
   display: flex;
   flex-direction: column;
   gap: 24px;

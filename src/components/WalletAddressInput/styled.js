@@ -5,6 +5,7 @@ const Container = styled.div`
   flex-direction: column;
   gap: 8px;
   width: 100%;
+  cursor: pointer;
 
   @media (width >= 3000px) {
     gap: 16px;
@@ -50,4 +51,25 @@ const InputContainer = styled.div`
     text-align: left;
   }
 `;
-export { InputContainer, Label, Container };
+
+const Input = styled.input`
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+
+  &::placeholder {
+    color: #897fac;
+  }
+
+  @media (width >= 3000px) {
+    margin-right: 20px;
+    font-size: 32px;
+  }
+
+  @media (width <= 768px) {
+    font-size: 14px;
+  }
+`;
+export { InputContainer, Label, Container, Input };
