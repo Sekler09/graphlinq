@@ -47,8 +47,6 @@ const InputContainer = styled.div`
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    direction: rtl;
-    text-align: left;
   }
 `;
 
